@@ -16,5 +16,5 @@ fn main() {
         .read_line(&mut guess)
         .expect("読み込みに失敗しました");
 
-    println!("次のように予想しました: {}", guess)
+    println!("次のように予想しました: {}", guess);
 }
