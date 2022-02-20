@@ -7,8 +7,6 @@ fn main() {
 
     let secret_number = rand::thread_rng().gen_range(1..101);
 
-    println!("秘密の数字は次の通り: {}", secret_number);
-
     loop {
         println!("数を入力してね");
 
