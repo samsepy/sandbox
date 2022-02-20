@@ -1,4 +1,8 @@
 fn main() {
-    const X: u32 = 100_000;
-    println!("xの値は: {}", X);
+    let x = 5;
+
+    let x = x + 1;
+
+    let x = x * 2;
+    println!("xの値は: {}", x);
 }
