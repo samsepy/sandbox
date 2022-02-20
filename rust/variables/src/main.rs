@@ -1,6 +1,4 @@
 fn main() {
-    let mut x = 5;
-    println!("xの値は: {}", x);
-    x = 6;
-    println!("xの値は: {}", x);
+    const X: u32 = 100_000;
+    println!("xの値は: {}", X);
 }
