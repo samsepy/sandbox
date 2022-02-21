@@ -1,10 +1,9 @@
 fn main() {
-    let x = 5;
+    let x = five();
 
-    let y = {
-        let x = 3;
-        x + 1
-    };
+    println!("xの値は: {}", x);
+}
 
-    println!("yの値は: {}", y);
+fn five() -> i32 {
+    5
 }
