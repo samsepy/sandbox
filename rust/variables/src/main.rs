@@ -1,4 +1,8 @@
 fn main() {
-    let x = (500, 6.4, 1);
-    println!("x2の値は: {}, x1の値は: {}, x0の値は: {}", x.2, x.1, x.0);
+    println!("Hello, world!");
+    another_function();
+}
+
+fn another_function() {
+    println!("Another function.");
 }
