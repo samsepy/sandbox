@@ -1,10 +1,6 @@
 fn main() {
-    let num = 3;
+    let condition = true;
+    let x = if condition { 5 } else { 6 };
 
-    if num < 5 {
-        println!("条件は真でした");
-    }
-    else {
-        println!("条件は偽でした");
-    }
+    println!("xの値は: {}", x);
 }
