@@ -1,7 +1,10 @@
 fn main() {
-    another_function(100, 200);
-}
+    let x = 5;
 
-fn another_function(x: i32, y: i32) {
-    println!("xの値は: {}, yの値は: {}", x, y);
+    let y = {
+        let x = 3;
+        x + 1
+    };
+
+    println!("yの値は: {}", y);
 }
