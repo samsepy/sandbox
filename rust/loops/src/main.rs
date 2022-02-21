@@ -1,7 +1,7 @@
 fn main() {
-    let a = [10, 20, 30, 40, 50];
-
-    for element in a.iter() {
-        println!("elementの値は{}です", element);
+    let n = 10;
+    for number in (0..n).rev() {
+        println!("numberの値は{}です", number);
     }
+    println!("終わり");
 }
