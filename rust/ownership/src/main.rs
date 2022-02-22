@@ -1,6 +1,7 @@
 fn main() {
     let x = 5;
-    let y = x;
+    let mut y = x;
+    y = 10;
 
     println!("x = {}, y = {}", x, y);
 }
