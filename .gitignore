@@ -4,3 +4,4 @@ rust/hello_cargo/target
 rust/guessing_game/target
 rust/variables/target
 rust/loops/target
+rust/ownership/target
