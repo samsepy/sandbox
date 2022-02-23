@@ -1,9 +1,18 @@
 fn main() {
-    let mut s = String::from("hello");
+    let s = String::from("hello world");
+    let len = first_word(&s);
 
-    let r1 = &s;        // OK
-    let r2 = &s;        // OK
-    // let r3 = &mut s; // NG
+    println!("first word length: {}", len);
+}
 
-    println!("{}, {}", r1, r2);
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return i;
+        }
+    }
+
+    s.len()
 }
