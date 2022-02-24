@@ -1,14 +1,19 @@
 fn main() {
-    let mut s = String::from("hello world");
-    let len = first_word(&s);
+    // let hello = &s[0..5];
+    // let world = &s[6..11];
+    // println!("hello: {}", hello); // スライスサンプル
+    // println!("world: {}", world); // スライスサンプル
 
-    s.clear();
+    let mut s = String::from("hello world");
+    let len = first_word(&s); // 不変借用発生
+
+    // s.clear(); // NG: 不変借用の後可変借用が発生しているためエラー
 
     println!("s: {}", s);
     println!("len: {}", len);
 }
 
-fn first_word(s: &String) -> usize {
+fn first_word(s: &String) -> &str {
     let bytes = s.as_bytes();
 
     // println!("bytes[0]: {}", bytes[0]); // => 104: アスキーコードでhに相当
@@ -16,9 +21,9 @@ fn first_word(s: &String) -> usize {
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return i;
+            return &s[0..i];
         }
     }
 
-    s.len()
+    &s[..]
 }
