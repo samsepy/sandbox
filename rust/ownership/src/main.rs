@@ -4,7 +4,7 @@ fn main() {
     // println!("hello: {}", hello); // スライスサンプル
     // println!("world: {}", world); // スライスサンプル
 
-    let mut s = String::from("hello world");
+    let s = String::from("hello world"); // &str型
     let len = first_word(&s); // 不変借用発生
 
     // s.clear(); // NG: 下記不変借用で使われているのにも関わらず可変借用を利用しているためエラー
@@ -13,7 +13,7 @@ fn main() {
     println!("len: {}", len); // 不変借用はここで使われる
 }
 
-fn first_word(s: &String) -> &str {
+fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     // println!("bytes[0]: {}", bytes[0]); // => 104: アスキーコードでhに相当
