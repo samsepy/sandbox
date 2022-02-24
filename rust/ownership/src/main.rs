@@ -7,10 +7,10 @@ fn main() {
     let mut s = String::from("hello world");
     let len = first_word(&s); // 不変借用発生
 
-    // s.clear(); // NG: 不変借用の後可変借用が発生しているためエラー
+    // s.clear(); // NG: 下記不変借用で使われているのにも関わらず可変借用を利用しているためエラー
 
     println!("s: {}", s);
-    println!("len: {}", len);
+    println!("len: {}", len); // 不変借用はここで使われる
 }
 
 fn first_word(s: &String) -> &str {
