@@ -6,14 +6,16 @@ fn main() {
         active: bool,
     }
 
-    let mut user1 = User {
-        email: String::from("someone@example.com"),
-        username: String::from("someusername123"),
+    let email = String::from("hoge@example.com");
+    let username = String::from("hoge");
+
+    let user1 = User {
+        email,
+        username,
         active: true,
         sign_in_count: 1,
     };
 
-    user1.email = String::from("anotheremail@example.com");
 
     println!("email: {}", user1.email);
     println!("username: {}", user1.username);
