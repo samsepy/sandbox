@@ -5,3 +5,4 @@ rust/guessing_game/target
 rust/variables/target
 rust/loops/target
 rust/ownership/target
+rust/structs/target
