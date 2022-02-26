@@ -16,9 +16,20 @@ fn main() {
         sign_in_count: 1,
     };
 
+    println!("user1 email: {}", user1.email);
+    println!("user1 username: {}", user1.username);
+    println!("user1 active: {}", user1.active);
+    println!("user1 sign_in_count: {}", user1.sign_in_count);
 
-    println!("email: {}", user1.email);
-    println!("username: {}", user1.username);
-    println!("active: {}", user1.active);
-    println!("sign_in_count: {}", user1.sign_in_count);
+    let user2 = User {
+        email: String::from("hoge2@example.com"),
+        username: String::from("hoge2"),
+        active: user1.active,
+        sign_in_count: user1.sign_in_count,
+    };
+
+    println!("user2 email: {}", user2.email);
+    println!("user2 username: {}", user2.username);
+    println!("user2 active: {}", user2.active);
+    println!("user2 sign_in_count: {}", user2.sign_in_count);
 }
