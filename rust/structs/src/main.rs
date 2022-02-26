@@ -1,32 +1,10 @@
 fn main() {
-    struct User {
-        username: String,
-        email: String,
-        sign_in_count: u64,
-        active: bool,
-    }
+    struct Color(i32, i32, i32);
+    struct Point(i32, i32, i32);
 
-    let email = String::from("hoge@example.com");
-    let username = String::from("hoge");
+    let red = Color(255, 0, 0);
 
-    let user1 = User {
-        email,
-        username,
-        active: true,
-        sign_in_count: 1,
-    };
-
-    println!("user1 email: {}", user1.email);
-    println!("user1 username: {}", user1.username);
-    println!("user1 active: {}", user1.active);
-    println!("user1 sign_in_count: {}", user1.sign_in_count);
-
-    let user2 = User {
-        ..user1
-    };
-
-    println!("user2 email: {}", user2.email);
-    println!("user2 username: {}", user2.username);
-    println!("user2 active: {}", user2.active);
-    println!("user2 sign_in_count: {}", user2.sign_in_count);
+    println!("red: {}", red.0);
+    println!("red: {}", red.1);
+    println!("red: {}", red.2);
 }
