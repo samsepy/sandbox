@@ -22,8 +22,6 @@ fn main() {
     println!("user1 sign_in_count: {}", user1.sign_in_count);
 
     let user2 = User {
-        email: String::from("hoge2@example.com"),
-        username: String::from("hoge2"),
         ..user1
     };
 
