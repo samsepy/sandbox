@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -9,6 +10,7 @@ fn main() {
         height: 50,
     };
 
+    println!("rect1は{:?}です", rect1);
     println!("長方形の面積は{}です", area(&rect1));
 }
 
