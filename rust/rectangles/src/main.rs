@@ -12,6 +12,10 @@ impl Rectangle {
     fn can_hold(&self, other: &Rectangle) -> bool {
         self.width > other.width && self.height > other.height
     }
+
+    fn square(size: u32) -> Rectangle {
+        Rectangle { width: size, height: size }
+    }
 }
 
 fn main() {
@@ -34,4 +38,5 @@ fn main() {
     println!("長方形の面積は{}です", rect1.area());
     println!("rect2はrect1にはまりますか？: {}", rect1.can_hold(&rect2));
     println!("rect3はrect1にはまりますか？: {}", rect1.can_hold(&rect3));
+    println!("squareは{}です", Rectangle::square(10).area());
 }
