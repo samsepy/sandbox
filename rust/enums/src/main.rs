@@ -1,6 +1,21 @@
-fn main() {
-    let mut absent_number: Option<i32> = None;
-    absent_number = Some(5); // 潜在的にNoneの可能性ある
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
 
-    println!("absent_number: {:#?}", absent_number);
+fn value_in_cents(coin: Coin) -> u32 {
+    // ifでは論理値を返す必要があるが、matchではどんな型でも良い
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+
+fn main() {
+    let c = value_in_cents(Coin::Penny);
+    println!("c: {}", c);
 }
