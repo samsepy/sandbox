@@ -20,14 +20,16 @@ fn main() {
         address: String::from("::1"),
     };
 
-    println!("あなたのIPは{}、{}です", home.address, route(&home));
-    println!("あなたのIPは{}、{}です", loopback.address, route(&loopback));
+    println!("あなたのIPは{}です", route(&home));
+    println!("あなたのIPは{}です", route(&loopback));
 }
 
 fn route(ip: &IpAddr) -> String {
     if ip.kind == IpAddrKind::V4 {
-        String::from("レガシー")
+        let s = ip.address.to_owned() + "、" + "レガシー";
+        String::from(s)
     } else {
-        String::from("モダン")
+        let s = ip.address.to_owned() + "、" + "モダン";
+        String::from(s)
     }
 }
