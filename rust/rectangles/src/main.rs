@@ -5,13 +5,14 @@ struct Rectangle {
 }
 
 impl Rectangle {
-    fn area(&self) -> u32 {
+    fn area(&mut self) -> u32 {
+        self.width = 30 * 2;
         self.width * self.height
     }
 }
 
 fn main() {
-    let rect1 = Rectangle {
+    let mut rect1 = Rectangle {
         width: 30,
         height: 50,
     };
