@@ -1,9 +1,8 @@
 fn main() {
-    let mut v = vec![1];
+    let v = vec![1, 2, 3, 4, 5];
 
-    v.push(5);
-    v.push(6);
-    v.push(7);
-    v.push(8);
-    println!("v: {:?}", v);
+    let third: &i32 = &v[2];
+    let third2: Option<&i32> = v.get(2);
+    println!("third: {}", third);
+    println!("third: {:#?}", third2);
 }
