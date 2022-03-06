@@ -11,3 +11,4 @@ rust/enums/target
 rust/my-project/target
 rust/collections/target
 rust/hashmap/target
+rust/errors/target
