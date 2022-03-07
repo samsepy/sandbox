@@ -17,7 +17,10 @@ fn read_username_from_file() -> Result<String, io::Error> {
     let mut s = String::new();
 
     match f.read_to_string(&mut s) {
-        Ok(_) => Ok(s),
+        Ok(_) => {
+            println!("s: {}", s);
+            Ok(s)
+        }
         Err(e) => Err(e),
     }
 }
