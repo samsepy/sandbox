@@ -21,6 +21,11 @@ fn main() {
             Err(_) => continue,
         };
 
+        if guess < 1 || guess > 100 {
+            println!("1から100の間の数を入力してください");
+            continue;
+        }
+
         println!("次のように予想しました: {}", guess);
 
         match guess.cmp(&secret_number) {
