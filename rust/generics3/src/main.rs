@@ -36,14 +36,23 @@ pub fn notify(item: &impl Summary) {
     println!("Breaking news! {}", item.summarize());
 }
 
-fn main() {
-    let tweet = Tweet {
+fn returns_summarizable() -> impl Summary {
+    Tweet {
         username: String::from("horse_ebooks"),
         content: String::from("of course, as you probably already know, people"),
         reply: false,
         retweet: false,
-    };
+    }
+}
 
+fn main() {
+    // let tweet = Tweet {
+    //     username: String::from("horse_ebooks"),
+    //     content: String::from("of course, as you probably already know, people"),
+    //     reply: false,
+    //     retweet: false,
+    // };
+    let tweet = returns_summarizable();
     // println!("1 new tweet: {}", tweet.summarize());
     notify(&tweet);
 }
