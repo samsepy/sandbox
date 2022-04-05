@@ -17,4 +17,5 @@ rust/errors3/target
 rust/generics1/target
 rust/generics2/target
 rust/generics3/target
+rust/lifetime/target
 
